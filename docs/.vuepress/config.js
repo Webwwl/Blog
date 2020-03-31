@@ -8,6 +8,7 @@ module.exports = {
       { text: 'Js', link: '/js/' },
       { text: 'Vue', link: '/vue/' },
       { text: 'Ts', link: '/ts/' },
+      { text: '浏览器相关', link: '/browser/' },
       { text: 'Github', link: 'https://github.com/Webwwl' },
     ],
     sidebar: {
@@ -42,6 +43,17 @@ module.exports = {
           sidebarDepth: 1,    // 可选的, 默认值是 1
           children: [
             ['', '基本类型'],
+          ]
+        }
+      ],
+      '/browser/': [
+        {
+          title: '浏览器相关',
+          path: '/browser/',
+          collapsable: false, // 可选的, 默认值是 true,
+          sidebarDepth: 1,    // 可选的, 默认值是 1
+          children: [
+            ['', '跨域'],
           ]
         }
       ]
