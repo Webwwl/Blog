@@ -1,0 +1,25 @@
+{
+  "name": "Blog",
+  "version": "1.0.0",
+  "description": "write my blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "publish": "npm run build && scp -r ./docs/.vuepress/dist/*  root@47.93.131.151:/root/www.wuwenliang.xyz/Blog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webwwl/Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Webwwl/Blog/issues"
+  },
+  "homepage": "https://github.com/Webwwl/Blog#readme",
+  "devDependencies": {
+    "vuepress": "^1.4.0"
+  }
+}
