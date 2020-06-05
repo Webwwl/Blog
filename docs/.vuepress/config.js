@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Webwwl の Blog',
+  base: '/blog/',
 
   themeConfig: {
     displayAllHeaders: true,
@@ -7,7 +8,7 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Js', link: '/js/' },
       { text: 'Vue', link: '/vue/' },
-      { text: 'Ts', link: '/ts/' },
+      { text: 'ARTS', link: '/arts/' },
       { text: 'Nodejs', link: '/nodejs/' },
       { text: '浏览器相关', link: '/browser/' },
       { text: 'Github', link: 'https://github.com/Webwwl' },
@@ -41,14 +42,15 @@ module.exports = {
           ]
         }
       ],
-      '/ts/': [
+      '/arts/': [
         {
-          title: 'Typescript',
-          path: '/ts/',
+          title: 'ARTS',
+          path: '/arts/',
           collapsable: false, // 可选的, 默认值是 true,
           sidebarDepth: 0,    // 可选的, 默认值是 1
           children: [
-            ['', '基本类型'],
+            ['', 'week_01'],
+            ['week_02', 'week_02'],
           ]
         }
       ],

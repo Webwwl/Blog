@@ -23,6 +23,7 @@ export default {
     }
   },
  }
+</script>
 ```
 这里定义一个fullname的计算属性，根据`firstname`和`lastname`的值计算值，当这两个值发生变化时fullname会重新计算
 #### initState
@@ -181,10 +182,9 @@ get () {
 Vue通过在Vm实例上定义getter，在getter里面计算watcher的值，那么肯定有`Vm.fullname`这样的取值语句触发getter，这是在哪个地方触发的呢？
 1. `render`函数，在mount过程中会执行render函数，里面有`vm.fullname`的求值。
 2. 如果没有在页面中使用计算属性，在method中有`this.fullname`也是一样。
-
 ![](https://user-gold-cdn.xitu.io/2019/10/26/16e0731c0c2c33d9?w=679&h=408&f=png&s=63900)
 ##### computedWatcher的update
-```
+```js
 // core/observer/watcher.js
   update () {
     /* istanbul ignore else */
@@ -217,7 +217,7 @@ function createComputedGetter (key) {
 ```
 ##### method vs computed
 官网中也有描述，computed的功能用method也可以实现，比如我们改写前面的例子
-```
+```js
 <template>
   <div class="container">
     <div>{{fullname()}}</div>
@@ -240,7 +240,9 @@ export default {
     }
   },
  }
+</script>
 ```
 method虽然实现了功能，但是这里有个问题，无论`fristname`和`lastname`是否变化，求值函数都会执行一遍，假设这个取值过程十分复杂，在依赖的值没有变化时重新计算是没有必要的，这种情况下采用`computed`更合理，`watcher.dirty === false`,不会重新计算
 #### 总结
-![](https://user-gold-cdn.xitu.io/2019/10/26/16e073776ad913bb?w=2574&h=1474&f=png&s=250132)
+
+![流程图](https://user-gold-cdn.xitu.io/2019/10/26/16e073776ad913bb?w=2574&h=1474&f=png&s=250132)
