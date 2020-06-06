@@ -9,6 +9,17 @@
 #### Algorithm
 深度优先遍历&广度优先遍历
 ```JS
+function DFS(root) {
+  if (!root) return
+  console.log(root.value)
+  const children = root.children
+  if (Array.isArray(children) && children.length) {
+    for(const child of children) {
+      DFS(child)
+    }
+  }
+}
+
 function BFS(root) {
   const queue = []
   queue.push(root)
@@ -22,13 +33,14 @@ function BFS(root) {
 }
 ```
 
-* 求和转化为求差
-* map的key是array的值， value是array的索引
-
 #### Review
-[一篇关于Vue使用的建议的文章](https://medium.com/@hohanga/vue-best-practices-templates-and-variables-99cc7e1fd42b)
+[使用TypeScript的好处](https://exploringjs.com/tackling-ts/ch_why-typescript.html)
 
-> 读起来没啥难度，内容偏水
+* 静态检查
+* 函数参数类型确定，增加可读性
+* 代码提示更加友好
+* 让重构更加安全
+* 可以使用新的语言特性，编译成低版本js
 
 #### Tip
 实现flat:
@@ -48,4 +60,4 @@ Array.prototype.myFlat = function(depth = 0, ret = []) {
 }
 ```
 #### Share
-本周无文章
+[Vue响应式原理分析](http://www.wuwenliang.xyz/blog/vue/)
