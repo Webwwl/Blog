@@ -51,6 +51,7 @@ module.exports = {
           children: [
             ['', 'week_01'],
             ['week_02', 'week_02'],
+            ['week_03', 'week_03'],
           ]
         }
       ],

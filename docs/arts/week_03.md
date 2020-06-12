@@ -7,15 +7,16 @@
 <hr>
 
 #### Algorithm
-两数之和：[leetcode](https://leetcode-cn.com/problems/two-sum/)
+三数之和：[leetcode](https://leetcode-cn.com/problems/3sum/)
 
-* 求和转化为求差
-* map的key是array的值， value是array的索引
+* 排序
+* 双指针
 
 #### Review
-[一篇关于Vue使用的建议的文章](https://medium.com/@hohanga/vue-best-practices-templates-and-variables-99cc7e1fd42b)
+[typescript decorator用法](https://www.typescriptlang.org/docs/handbook/decorators.html#class-decorators)
 
-> 读起来没啥难度，内容偏水
+* 装饰静态方法、属性的时候target是constructor，一般情况下是prototype
+> 关注装饰类、方法、属性、参数的用法
 
 #### Tip
 节流&防抖:
